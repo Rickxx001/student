@@ -17,15 +17,10 @@ public class MybatisDome {
 
 //        2.获取sqlsession对象
         SqlSession sqlSession = sqlSessionFactory.openSession();
-//        3.获取接口代理
-        mybatisTest mapper = sqlSession.getMapper(mybatisTest.class);
 
-
-////        3.执行sql语句
-//        List<mybatisTest>  mybatisTests= sqlSession.selectList("test.selectAll");
-//        System.out.println(mybatisTests);
-//       4. 使用代理运行语句
-
+//        3.执行sql语句
+        List<mybatisTest>  mybatisTests= sqlSession.selectList("test.selectAll");
+        System.out.println(mybatisTests);
 
 //        4.释放资源
         sqlSession.close();
